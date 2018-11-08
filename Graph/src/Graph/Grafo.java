@@ -9,7 +9,31 @@ public class Grafo {
 	private int size;
     private List<Vertice> vertices;
     
-    public Grafo(int size)
+    public int[][] getSalidas() {
+		return salidas;
+	}
+
+	public void setSalidas(int[][] salidas) {
+		this.salidas = salidas;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public List<Vertice> getVertices() {
+		return vertices;
+	}
+
+	public void setVertices(List<Vertice> vertices) {
+		this.vertices = vertices;
+	}
+
+	public Grafo(int size)
     {
     	this.size=size;
     	this.salidas = new int[size][size];
