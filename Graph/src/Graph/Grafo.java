@@ -1,10 +1,9 @@
 package Graph;
 
-import java.util.ArrayList;
 import java.util.List;
  
-
 public class Grafo {
+	
 	private int [][] salidas;
 	private int size;
     private List<Vertice> vertices;

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Vertice {
-	
 
     private String salida;
     private List<Arista> aristas;
