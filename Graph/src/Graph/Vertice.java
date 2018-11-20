@@ -23,6 +23,7 @@ public class Vertice
     {
 	this.etiqueta = etiqueta;
 	this.vecindad = new ArrayList<Arista>();
+	this.adyacentes = new ArrayList<Vertice>(); 
     }
 
     /**
