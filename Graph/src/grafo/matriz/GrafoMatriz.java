@@ -246,7 +246,7 @@ public class GrafoMatriz<T> extends Grafo implements IGrafoMatriz<T>  {
 			while (all.size() != vertices.size()) {
 				ArrayList<T> g = DFS(inicial);
 				all.addAll(g);
-				for (; index < vertices.size(); index++) {
+				while(index < vertices.size()) {
 					if (vertices.get(index).marcado() != IVertice.SENTIDO) {
 						boolean ex = exist(all, vertices.get(index).getElemento());
 						if (!vertices.get(index).getElemento().equals(inicial) && !ex) {
@@ -255,6 +255,7 @@ public class GrafoMatriz<T> extends Grafo implements IGrafoMatriz<T>  {
 						}
 
 					}
+					index++; 
 				}
 				ret++;
 			}
