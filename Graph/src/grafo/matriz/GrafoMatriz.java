@@ -9,6 +9,13 @@ public class GrafoMatriz<T> extends Grafo implements IGrafoMatriz<T>  {
 
 	private ArrayList<Vertice<T>> vertices;
 
+	public GrafoMatriz(ArrayList<Vertice> nodos) {
+		
+		this.nodos = nodos; 
+	}
+
+	
+	
 	public GrafoMatriz() {
 		aristas = new ArrayList<>();
 		vertices = new ArrayList<>();
@@ -246,7 +253,7 @@ public class GrafoMatriz<T> extends Grafo implements IGrafoMatriz<T>  {
 			while (all.size() != vertices.size()) {
 				ArrayList<T> g = DFS(inicial);
 				all.addAll(g);
-				while(index < vertices.size()) {
+				for (; index < vertices.size(); index++) {
 					if (vertices.get(index).marcado() != IVertice.SENTIDO) {
 						boolean ex = exist(all, vertices.get(index).getElemento());
 						if (!vertices.get(index).getElemento().equals(inicial) && !ex) {
@@ -255,7 +262,6 @@ public class GrafoMatriz<T> extends Grafo implements IGrafoMatriz<T>  {
 						}
 
 					}
-					index++; 
 				}
 				ret++;
 			}

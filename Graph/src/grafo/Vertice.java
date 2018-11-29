@@ -6,7 +6,7 @@ public class Vertice<T> implements IVertice<T> {
 
 	private boolean marca;
 
-	private int llave; 
+	private int etiqueta; 
 	
 	private T elemento;
 
@@ -37,12 +37,12 @@ public class Vertice<T> implements IVertice<T> {
 		this.marca = marca;
 	}
 
-	public int getLlave() {
-		return llave;
+	public int getEtiqueta() {
+		return etiqueta;
 	}
 
-	public void setLlave(int llave) {
-		this.llave = llave;
+	public void setEtiqueta(int llave) {
+		this.etiqueta = llave;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class Vertice<T> implements IVertice<T> {
 	 * @return true si los numeros representativos de los nodos son iguales, false en caso contrario
 	 */
 	public boolean equals(Vertice<T> nodo2){
-		return this.llave==nodo2.getLlave();
+		return this.etiqueta==nodo2.getEtiqueta();
 	}
 	
 	/**
@@ -128,7 +128,7 @@ public class Vertice<T> implements IVertice<T> {
 	 * <li>&gt1 si otroNodo es mayor 
 	 */
 	public int compareTo(Vertice<T> otroNodo) {
-		return llave-otroNodo.getLlave();
+		return etiqueta-otroNodo.getEtiqueta();
 	}
 
 	

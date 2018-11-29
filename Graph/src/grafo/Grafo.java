@@ -1,5 +1,6 @@
 package grafo;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 import java.util.TreeSet;
@@ -8,7 +9,7 @@ import java.util.Vector;
 
 public abstract class Grafo {
 
-	private Vector<Vertice> nodos;
+	protected ArrayList<Vertice> nodos;
 	
 	
 	/**
@@ -73,7 +74,7 @@ public abstract class Grafo {
 			for(Vertice n:vecinos){
 				if(!visitados.contains(n)){ //si el vecino no ha sido visitado lo encolamos
 					n.setPredecesor(actual);
-					if(n.getLlave()==fin){
+					if(n.getEtiqueta()==fin){
 						listo=true;
 						nodofin=n;
 						break;
@@ -97,7 +98,7 @@ public abstract class Grafo {
 
 	public Vertice obtenerNodo(int nodoNumero){
 		for(Vertice nodo:nodos){
-			if(nodo.getLlave()==nodoNumero){
+			if(nodo.getEtiqueta()==nodoNumero){
 				return nodo;
 			}
 		}

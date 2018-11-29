@@ -3,8 +3,21 @@ package grafo.lista;
 import java.util.*;
 import grafo.*;
 
-public class GrafoLista<T> implements IGrafoLista<T> {
+public class GrafoLista<T> extends Grafo implements IGrafoLista<T> {
 
+public GrafoLista(ArrayList<Vertice> nodos) {
+		
+		this.nodos = nodos; 
+	}
+
+public GrafoLista() {
+	
+	this.nodos = nodos; 
+}
+
+
+	
+	
 	private Hashtable<T, VerticeLista<T>> vertices;
 
 	public VerticeLista<T> crearVertice(T element, T[] adyacents, String[] names, double[] weights, int address) {
